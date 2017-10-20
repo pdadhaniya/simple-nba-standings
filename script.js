@@ -9,57 +9,57 @@ var TimberwolvesColors = "rgba(50,86,128,0.9)"
 var WizardsColors = "rgba(67,71,89,0.9)"
 var BucksColors = "rgba(52,86,66,0.9)"
 var RaptorsColors = "rgba(189,60,75,0.9)"
-var NuggetsColors = "rgba(189,60,75,0.9)"
-var PelicansColors = "rgba(189,60,75,0.9)"
-var HeatColors = "rgba(189,60,75,0.9)"
-var ClippersColors = "rgba(189,60,75,0.9)"
-var HornetsColors = "rgba(189,60,75,0.9)"
-var SixersColors = "rgba(189,60,75,0.9)"
-var BlazersColors = "rgba(189,60,75,0.9)"
-var JazzColors = "rgba(189,60,75,0.9)"
+var NuggetsColors = "rgba(81,132,191,0.9)"
+var PelicansColors = "rgba(146,120,78,0.9)"
+var HeatColors = "rgba(113,56,56,0.9)"
+var ClippersColors = "rgba(182,179,177,0.9)"
+var HornetsColors = "rgba(0,125,146,0.9)"
+var SixersColors = "rgba(56,99,161,0.9)"
+var BlazersColors = "rgba(195,62,73,0.9)"
+var JazzColors = "rgba(67,71,89,0.9)"
 var PistonsColors = "rgba(189,60,75,0.9)"
 var BullsColors = "rgba(189,60,75,0.9)"
-var HawksColors = "rgba(189,60,75,0.9)"
-var SunsColors = "rgba(189,60,75,0.9)"
-var KnicksColors = "rgba(189,60,75,0.9)"
-var KingsColors = "rgba(189,60,75,0.9)"
-var NetsColors = "rgba(189,60,75,0.9)"
-var PacersColors = "rgba(189,60,75,0.9)"
-var MagicColors = "rgba(189,60,75,0.9)"
-var MavericksColors = "rgba(189,60,75,0.9)"
-var LakersColors = "rgba(189,60,75,0.9)"
-var GrizzliesColors = "rgba(189,60,75,0.9)"
+var HawksColors = "rgba(195,62,73,0.9)"
+var SunsColors = "rgba(178,94,57,0.9)"
+var KnicksColors = "rgba( 209, 85, 31 ,0.9)"
+var KingsColors = "rgba( 107, 81, 140 ,0.9)"
+var NetsColors = "rgba( 60, 59, 60 ,0.9)"
+var PacersColors = "rgba( 252, 178, 63 ,0.9)"
+var MagicColors = "rgba( 15, 92, 157 ,0.9)"
+var MavericksColors = "rgba( 15, 92, 157 ,0.9)"
+var LakersColors = "rgba( 126, 87, 144 ,0.9)"
+var GrizzliesColors = "rgba( 106, 129, 164 ,0.9)"
 var winTotals = {
-  "Warriors": 1,
-  "Celtics": 0,
-  "Rockets": 2,
-  "Spurs": 1,
-  "Cavaliers": 1,
-  "Thunder": 1,
-  "Timberwolves": 0,
-  "Wizards": 1,
-  "Bucks": 1,
-  "Raptors": 1,
-  "Bulls": 0,
-  "Pistons": 1,
-  "Jazz": 1,
-  "Trail Blazers": 1,
-  "Sixers": 0,
-  "Hornets": 0,
-  "Clippers": 1,
-  "Heat": 0,
-  "Pelicans": 0,
-  "Nuggets": 0,
-  "Grizzlies": 1,
-  "Lakers": 0,
-  "Mavericks": 0,
-  "Magic": 1,
-  "Pacers": 1,
-  "Nets": 0,
-  "Kings": 0,
-  "Knicks": 0,
-  "Suns": 0,
-  "Hawks": 1,
+  "Warriors": 71,
+  "Celtics": 48,
+  "Rockets": 60,
+  "Spurs": 58,
+  "Cavaliers": 55,
+  "Thunder": 54,
+  "Timberwolves": 49,
+  "Wizards": 49,
+  "Bucks": 47,
+  "Raptors": 45,
+  "Bulls": 21,
+  "Pistons": 38,
+  "Jazz": 45,
+  "Trail Blazers": 45,
+  "Sixers": 41,
+  "Hornets": 43,
+  "Clippers": 44,
+  "Heat": 45,
+  "Pelicans": 39,
+  "Nuggets": 46,
+  "Grizzlies": 37,
+  "Lakers": 33,
+  "Mavericks": 34,
+  "Magic": 33,
+  "Pacers": 32,
+  "Nets": 28,
+  "Kings": 31,
+  "Knicks": 30,
+  "Suns": 28,
+  "Hawks": 24,
 }
 
 var data = {
