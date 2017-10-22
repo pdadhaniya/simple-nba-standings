@@ -8,6 +8,43 @@ body {
   margin: 50px auto;
 }
 
+.indiv-standings {
+  display: flex;
+  flex-direction: row;
+  /*width: 30%;*/
+  /*max-width: 30%;*/
+}
+
+.math-standings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.math-1 {
+  flex-grow: 1;
+  border: 1px solid red;
+}
+
+.math-2 {
+  flex-grow: 1;
+  border: 1px solid yellow;
+}
+
+.math-3 {
+  flex-grow: 1;
+  border: 1px solid blue;
+}
+
+
+.right-block {
+  flex-grow: 1 !important;
+}
+
+.left-block {
+  flex-grow: 1 !important;
+}
+
+
 h1 {
   font-weight: 200;
   font-size: 3em;

@@ -10,15 +10,20 @@
 
       gtag('config', 'UA-108355889-1');
     </script>
-    <title>NBA Standings</title>
+    <title>NBA Picks Standings</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <div class="wrapper">
-      <h1>League Standings</h1>
+    <div class="main-container">
+      <div class="three-team-standings">
+        <div class="wrapper">
+          <h1>Picks League Results</h1>
+        </div>
+        <canvas id="myChart" width="1200" height="500"></canvas>
+        <script src="script.js"></script>
+      </div>
     </div>
-    <canvas id="myChart" width="1200" height="500"></canvas>
-    <script src="script.js"></script>
   </body>
 </html>

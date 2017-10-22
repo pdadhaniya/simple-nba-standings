@@ -30,64 +30,199 @@ var MavericksColors = "rgba( 15, 92, 157 ,0.9)"
 var LakersColors = "rgba( 126, 87, 144 ,0.9)"
 var GrizzliesColors = "rgba( 106, 129, 164 ,0.9)"
 var winTotals = {
-  "Warriors": 71,
-  "Celtics": 48,
-  "Rockets": 60,
-  "Spurs": 58,
-  "Cavaliers": 55,
-  "Thunder": 54,
-  "Timberwolves": 49,
-  "Wizards": 49,
-  "Bucks": 47,
-  "Raptors": 45,
-  "Bulls": 21,
-  "Pistons": 38,
-  "Jazz": 45,
-  "Trail Blazers": 45,
-  "Sixers": 41,
-  "Hornets": 43,
-  "Clippers": 44,
-  "Heat": 45,
-  "Pelicans": 39,
-  "Nuggets": 46,
-  "Grizzlies": 37,
-  "Lakers": 33,
-  "Mavericks": 34,
-  "Magic": 33,
-  "Pacers": 32,
-  "Nets": 28,
-  "Kings": 31,
-  "Knicks": 30,
-  "Suns": 28,
-  "Hawks": 24,
+  "Warriors":1,
+  "Celtics":1,
+  "Rockets":2,
+  "Spurs":1,
+  "Cavaliers":2,
+  "Thunder":1,
+  "Timberwolves":1,
+  "Wizards":2,
+  "Bucks":1,
+  "Raptors":1,
+  "Bulls":0,
+  "Pistons":1,
+  "Jazz":1,
+  "Trail Blazers":2,
+  "Sixers":0,
+  "Hornets":1,
+  "Clippers":1,
+  "Heat":0,
+  "Pelicans":0,
+  "Nuggets":0,
+  "Grizzlies":1,
+  "Lakers":0,
+  "Mavericks":0,
+  "Magic":1,
+  "Pacers":1,
+  "Nets":1,
+  "Kings":1,
+  "Knicks":0,
+  "Suns":1,
+  "Hawks":1,
 }
+var zahid = ["Warriors", "Bulls", "Hawks"]
+var sunny = ["Celtics", "Pistons", "Suns"]
+var mayur = ["Rockets", "Jazz", "Knicks"]
+var parag = ["Spurs", "Trail Blazers", "Kings"]
+var sujay = ["Cavaliers", "Sixers", "Nets"]
+var deevyang = ["Thunder", "Hornets", "Pacers"]
+var neil = ["Timberwolves", "Clippers", "Magic"]
+var tejas = ["Wizards", "Heat", "Mavericks"]
+var ishan = ["Bucks", "Pelicans", "Lakers"]
+var vivek = ["Raptors", "Nuggets", "Grizzlies"]
+
+
 
 var data = {
   labels: ["Zahid","Sunny","Mayur","Parag","Sujay","Deevyang","Neil", "Tejas", "Ishan", "Vivek"],
   datasets: [
     {
       label:"Team 1",
-      data:[winTotals['Warriors'],winTotals['Celtics'],winTotals['Rockets'],winTotals['Spurs'],winTotals['Cavaliers'],winTotals['Thunder'],winTotals['Timberwolves'],winTotals['Wizards'],winTotals['Bucks'],winTotals['Raptors']],
+      data:[winTotals[zahid[0]],winTotals[sunny[0]],winTotals[mayur[0]],winTotals[parag[0]],winTotals[sujay[0]],winTotals[deevyang[0]],winTotals[neil[0]],winTotals[tejas[0]],winTotals[ishan[0]],winTotals[vivek[0]]],
       fill:false,
       backgroundColor: [WarriorsColors,CelticsColors,RocketsColors,SpursColors,CavaliersColors,ThunderColors,TimberwolvesColors,WizardsColors,BucksColors,RaptorsColors],
       borderWidth:1
     },
     {
       label:"Team 2",
-      data:[winTotals['Bulls'],winTotals['Pistons'],winTotals['Jazz'],winTotals['Trail Blazers'],winTotals['Sixers'],winTotals['Hornets'],winTotals['Clippers'],winTotals['Heat'],winTotals['Pelicans'],winTotals['Nuggets']],
+      data:[winTotals[zahid[1]],winTotals[sunny[1]],winTotals[mayur[1]],winTotals[parag[1]],winTotals[sujay[1]],winTotals[deevyang[1]],winTotals[neil[1]],winTotals[tejas[1]],winTotals[ishan[1]],winTotals[vivek[1]]],
       fill:false,
       backgroundColor: [BullsColors,PistonsColors,JazzColors,BlazersColors,SixersColors,HornetsColors,ClippersColors,HeatColors,PelicansColors,NuggetsColors],
       borderWidth:1
     },
     {
       label:"Team 3",
-      data:[winTotals['Hawks'],winTotals['Suns'],winTotals['Knicks'],winTotals['Kings'],winTotals['Nets'],winTotals['Pacers'],winTotals['Magic'],winTotals['Mavericks'],winTotals['Lakers'],winTotals['Grizzlies']],
+      data:[winTotals[zahid[2]],winTotals[sunny[2]],winTotals[mayur[2]],winTotals[parag [2]],winTotals[sujay[2]],winTotals[deevyang[2]],winTotals[neil[2]],winTotals[tejas[2]],winTotals[ishan[2]],winTotals[vivek[2]]],
       fill:false,
       backgroundColor: [HawksColors,SunsColors,KnicksColors,KingsColors,NetsColors,PacersColors,MagicColors,MavericksColors,LakersColors,GrizzliesColors],
       borderWidth:1
     }
   ]
 }
+
+var zahidData = {
+  labels: ["Golden State Warriors", "Chicago Bulls", "Atlanta Hawks"],
+  datasets: [
+    {
+      label: 'Zahid',
+      data:[winTotals['Warriors'], winTotals['Bulls'], winTotals['Hawks']],
+      fill:false,
+      backgroundColor: [WarriorsColors,BullsColors,HawksColors],
+      borderWidth: 1
+    }
+  ]
+}
+
+var sunnyData = {
+  labels: ["Boston Celtics", "Detroit Pistons", "Phoenix Suns"],
+  datasets: [
+    {
+      label: "Sunny",
+      data:[winTotals['Celtics'], winTotals['Pistons'], winTotals['Suns']],
+      fill:false,
+      backgroundColor: [WarriorsColors,BullsColors,HawksColors],
+      borderWidth: 1
+    }
+  ]
+}
+
+var mayurData = {
+  labels: ["Golden State Warriors", "Chicago Bulls", "Atlanta Hawks"],
+  datasets: [
+    {
+      data:[winTotals['Warriors'], winTotals['Bulls'], winTotals['Hawks']],
+      fill:false,
+      backgroundColor: [WarriorsColors,BullsColors,HawksColors],
+      borderWidth: 1
+    }
+  ]
+}
+
+var paragData = {
+  labels: ["Golden State Warriors", "Chicago Bulls", "Atlanta Hawks"],
+  datasets: [
+    {
+      data:[winTotals['Warriors'], winTotals['Bulls'], winTotals['Hawks']],
+      fill:false,
+      backgroundColor: [WarriorsColors,BullsColors,HawksColors],
+      borderWidth: 1
+    }
+  ]
+}
+
+var sujayData = {
+  labels: ["Golden State Warriors", "Chicago Bulls", "Atlanta Hawks"],
+  datasets: [
+    {
+      data:[winTotals['Warriors'], winTotals['Bulls'], winTotals['Hawks']],
+      fill:false,
+      backgroundColor: [WarriorsColors,BullsColors,HawksColors],
+      borderWidth: 1
+    }
+  ]
+}
+
+var deevyangData = {
+  labels: ["Golden State Warriors", "Chicago Bulls", "Atlanta Hawks"],
+  datasets: [
+    {
+      data:[winTotals['Warriors'], winTotals['Bulls'], winTotals['Hawks']],
+      fill:false,
+      backgroundColor: [WarriorsColors,BullsColors,HawksColors],
+      borderWidth: 1
+    }
+  ]
+}
+
+var neilData = {
+  labels: ["Golden State Warriors", "Chicago Bulls", "Atlanta Hawks"],
+  datasets: [
+    {
+      data:[winTotals['Warriors'], winTotals['Bulls'], winTotals['Hawks']],
+      fill:false,
+      backgroundColor: [WarriorsColors,BullsColors,HawksColors],
+      borderWidth: 1
+    }
+  ]
+}
+
+var tejasData = {
+  labels: ["Golden State Warriors", "Chicago Bulls", "Atlanta Hawks"],
+  datasets: [
+    {
+      data:[winTotals['Warriors'], winTotals['Bulls'], winTotals['Hawks']],
+      fill:false,
+      backgroundColor: [WarriorsColors,BullsColors,HawksColors],
+      borderWidth: 1
+    }
+  ]
+}
+
+var ishanData = {
+  labels: ["Golden State Warriors", "Chicago Bulls", "Atlanta Hawks"],
+  datasets: [
+    {
+      data:[winTotals['Warriors'], winTotals['Bulls'], winTotals['Hawks']],
+      fill:false,
+      backgroundColor: [WarriorsColors,BullsColors,HawksColors],
+      borderWidth: 1
+    }
+  ]
+}
+
+var vivekData = {
+  labels: ["Golden State Warriors", "Chicago Bulls", "Atlanta Hawks"],
+  datasets: [
+    {
+      data:[winTotals['Warriors'], winTotals['Bulls'], winTotals['Hawks']],
+      fill:false,
+      backgroundColor: [WarriorsColors,BullsColors,HawksColors],
+      borderWidth: 1
+    }
+  ]
+}
+
 var options = {
   responsive: true,
   scales: {
@@ -100,7 +235,14 @@ var options = {
       {
         stacked: true,
         ticks: {
-          beginAtZero: true
+          beginAtZero: true,
+          userCallback: function(label, index, labels) {
+               // when the floored value is the same as the value we have a whole number
+               if (Math.floor(label) === label) {
+                   return label;
+               }
+
+           },
         }
       }
     ]
@@ -112,4 +254,6 @@ var myBarChart = new Chart(ctx, {
   data: data,
   options: options
 });
+
+
 
