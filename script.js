@@ -31,7 +31,7 @@ var LakersColors = "rgba( 126, 87, 144 ,0.9)"
 var GrizzliesColors = "rgba( 106, 129, 164 ,0.9)"
 var winTotals = {
   "Warriors":3,
-  "Celtics":2,
+  "Celtics":3,
   "Rockets":4,
   "Spurs":4,
   "Cavaliers":3,
@@ -40,15 +40,15 @@ var winTotals = {
   "Wizards":3,
   "Bucks":3,
   "Raptors":2,
-  "Bulls":0,
+  "Bulls":1,
   "Pistons":3,
   "Jazz":2,
   "Trail Blazers":3,
   "Sixers":1,
   "Hornets":2,
-  "Clippers":3,
+  "Clippers":4,
   "Heat":2,
-  "Pelicans":1,
+  "Pelicans":2,
   "Nuggets":1,
   "Hawks":1,
   "Suns":2,
@@ -59,7 +59,7 @@ var winTotals = {
   "Magic":3,
   "Mavericks":1,
   "Lakers":2,
-  "Grizzlies":3,
+  "Grizzlies":4,
 }
 var zahid = ["Warriors", "Bulls", "Hawks"]
 var sunny = ["Celtics", "Pistons", "Suns"]
