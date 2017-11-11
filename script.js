@@ -30,36 +30,36 @@ var MavericksColors = "rgba( 15, 92, 157 ,0.9)"
 var LakersColors = "rgba( 126, 87, 144 ,0.9)"
 var GrizzliesColors = "rgba( 106, 129, 164 ,0.9)"
 var winTotals = {
-  "Warriors":9,
-  "Celtics":11,
-  "Rockets":9,
-  "Spurs":7,
-  "Cavaliers":5,
-  "Thunder":5,
-  "Timberwolves":7,
-  "Wizards":6,
-  "Bucks":5,
-  "Raptors":7,
-  "Bulls":2,
-  "Pistons":9,
-  "Jazz":5,
-  "Trail Blazers":6,
-  "Sixers":6,
-  "Hornets":5,
-  "Clippers":5,
-  "Heat":6,
-  "Pelicans":6,
-  "Nuggets":7,
-  "Hawks":2,
-  "Suns":4,
-  "Knicks":6,
-  "Kings":3,
-  "Nets":5,
-  "Pacers":6,
-  "Magic":8,
-  "Mavericks":2,
-  "Lakers":5,
-  "Grizzlies":7,
+  "Warriors":[9,3,12],
+  "Celtics":[11,2,13],
+  "Rockets":[9,3,12],
+  "Spurs":[7,5,12],
+  "Cavaliers":[5,7,12],
+  "Thunder":[5,7,12],
+  "Timberwolves":[7,4,11],
+  "Wizards":[6,5,11],
+  "Bucks":[5,6,11],
+  "Raptors":[7,4,11],
+  "Bulls":[2,8,10],
+  "Pistons":[9,3,12],
+  "Jazz":[5,7,12],
+  "Trail Blazers":[6,6,12],
+  "Sixers":[6,5,11],
+  "Hornets":[5,7,12],
+  "Clippers":[5,6,11],
+  "Heat":[6,6,12],
+  "Pelicans":[6,6,12],
+  "Nuggets":[7,5,12],
+  "Hawks":[2,10,12],
+  "Suns":[4,9,13],
+  "Knicks":[6,5,11],
+  "Kings":[3,8,11],
+  "Nets":[5,7,12],
+  "Pacers":[6,7,13],
+  "Magic":[8,4,12],
+  "Mavericks":[2,10,12],
+  "Lakers":[5,7,12],
+  "Grizzlies":[7,4,11],
 }
 var zahid = ["Warriors", "Bulls", "Hawks"]
 var sunny = ["Celtics", "Pistons", "Suns"]
@@ -71,31 +71,77 @@ var neil = ["Timberwolves", "Clippers", "Magic"]
 var tejas = ["Wizards", "Heat", "Mavericks"]
 var ishan = ["Bucks", "Pelicans", "Lakers"]
 var vivek = ["Raptors", "Nuggets", "Grizzlies"]
-
-
+var people = [
+  {name: 'Zahid', teams: zahid},
+  {name: 'Sunny', teams: sunny},
+  {name: 'Mayur', teams: mayur},
+  {name: 'Parag', teams: parag},
+  {name: 'Sujay', teams: sujay},
+  {name: 'Deevyang', teams: deevyang},
+  {name: 'Neil', teams: neil},
+  {name: 'Tejas', teams: tejas},
+  {name: 'Ishan', teams: ishan},
+  {name: 'Vivek', teams: vivek}
+]
+// var zahidWins = getWins(zahid)
+function getWins(personName) {
+  return personName.map((team) => winTotals[team][0]).reduce((sum, value) => sum + value)
+}
+function getGamesPlayed(personName) {
+  return personName.map((team) => winTotals[team][2]).reduce((sum, value) => sum + value)
+}
+function getWinPercentage(personName) {
+  return (getWins(personName) / getGamesPlayed(personName)) * 100
+}
+function personToWinPercentage(group) {
+  var theStandings = {}
+  group.map(person =>  {
+    theStandings[person.name] = getWinPercentage(person.teams)
+  })
+  return theStandings
+}
+function getLabels() {
+  return Object.keys(personToWinPercentage(people))
+}
+var participants = getLabels()
 
 var data = {
-  labels: ["Zahid","Sunny","Mayur","Parag","Sujay","Deevyang","Neil", "Tejas", "Ishan", "Vivek"],
+  labels: [participants[0],participants[1],participants[2],participants[3],participants[4],participants[5],participants[6],participants[7],participants[8],participants[9]],
   datasets: [
     {
       label:"Team 1",
-      data:[winTotals[zahid[0]],winTotals[sunny[0]],winTotals[mayur[0]],winTotals[parag[0]],winTotals[sujay[0]],winTotals[deevyang[0]],winTotals[neil[0]],winTotals[tejas[0]],winTotals[ishan[0]],winTotals[vivek[0]]],
+      data:[winTotals[zahid[0]][0],winTotals[sunny[0]][0],winTotals[mayur[0]][0],winTotals[parag[0]][0],winTotals[sujay[0]][0],winTotals[deevyang[0]][0],winTotals[neil[0]][0],winTotals[tejas[0]][0],winTotals[ishan[0]][0],winTotals[vivek[0]][0]],
       fill:false,
       backgroundColor: [WarriorsColors,CelticsColors,RocketsColors,SpursColors,CavaliersColors,ThunderColors,TimberwolvesColors,WizardsColors,BucksColors,RaptorsColors],
       borderWidth:1
     },
     {
       label:"Team 2",
-      data:[winTotals[zahid[1]],winTotals[sunny[1]],winTotals[mayur[1]],winTotals[parag[1]],winTotals[sujay[1]],winTotals[deevyang[1]],winTotals[neil[1]],winTotals[tejas[1]],winTotals[ishan[1]],winTotals[vivek[1]]],
+      data:[winTotals[zahid[1]][0],winTotals[sunny[1]][0],winTotals[mayur[1]][0],winTotals[parag[1]][0],winTotals[sujay[1]][0],winTotals[deevyang[1]][0],winTotals[neil[1]][0],winTotals[tejas[1]][0],winTotals[ishan[1]][0],winTotals[vivek[1]][0]],
       fill:false,
       backgroundColor: [BullsColors,PistonsColors,JazzColors,BlazersColors,SixersColors,HornetsColors,ClippersColors,HeatColors,PelicansColors,NuggetsColors],
       borderWidth:1
     },
     {
       label:"Team 3",
-      data:[winTotals[zahid[2]],winTotals[sunny[2]],winTotals[mayur[2]],winTotals[parag [2]],winTotals[sujay[2]],winTotals[deevyang[2]],winTotals[neil[2]],winTotals[tejas[2]],winTotals[ishan[2]],winTotals[vivek[2]]],
+      data:[winTotals[zahid[2]][0],winTotals[sunny[2]][0],winTotals[mayur[2]][0],winTotals[parag [2]][0],winTotals[sujay[2]][0],winTotals[deevyang[2]][0],winTotals[neil[2]][0],winTotals[tejas[2]][0],winTotals[ishan[2]][0],winTotals[vivek[2]][0]],
       fill:false,
       backgroundColor: [HawksColors,SunsColors,KnicksColors,KingsColors,NetsColors,PacersColors,MagicColors,MavericksColors,LakersColors,GrizzliesColors],
+      borderWidth:1
+    }
+  ]
+}
+
+var data2 = {
+  labels: [participants[0],participants[1],participants[2],participants[3],participants[4],participants[5],participants[6],participants[7],participants[8],participants[9]],
+  datasets: [
+    {
+      label:"Win Percentage",
+      data:[getWinPercentage(zahid),getWinPercentage(sunny),getWinPercentage(mayur),getWinPercentage(parag),getWinPercentage(sujay),getWinPercentage(deevyang),getWinPercentage(neil),getWinPercentage(tejas),getWinPercentage(ishan),getWinPercentage(vivek)],
+      fill:false,
+      backgroundColor:["rgba(255, 99, 132, 0.2)","rgba(255, 159, 64, 0.2)","rgba(75, 192, 192, 0.2)","rgba(54, 162, 235, 0.2)","rgba(153, 102, 255, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 159, 64, 0.2)","rgba(75, 192, 192, 0.2)","rgba(54, 162, 235, 0.2)","rgba(153, 102, 255, 0.2)"],
+      borderColor:["rgb(255, 99, 132)","rgb(255, 159, 64)","rgb(75, 192, 192)","rgb(54, 162, 235)","rgb(153, 102, 255)","rgb(255, 99, 132)","rgb(255, 159, 64)","rgb(75, 192, 192)","rgb(54, 162, 235)","rgb(153, 102, 255)"],
+      hoverBackgroundColor:["rgba(255, 99, 132, 0.6)","rgba(255, 159, 64, 0.6)","rgba(75, 192, 192, 0.6)","rgba(54, 162, 235, 0.6)","rgba(153, 102, 255, 0.6)","rgba(255, 99, 132, 0.6)","rgba(255, 159, 64, 0.6)","rgba(75, 192, 192, 0.6)","rgba(54, 162, 235, 0.6)","rgba(153, 102, 255, 0.6)"],
       borderWidth:1
     }
   ]
@@ -248,11 +294,43 @@ var options = {
     ]
   }
 }
+
+var options2 = {
+  responsive: true,
+  scales: {
+    xAxes: [
+      {
+        stacked: true
+      }
+    ],
+    yAxes: [
+      {
+        stacked: true,
+        ticks: {
+          beginAtZero: true,
+          userCallback: function(label, index, labels) {
+               // when the floored value is the same as the value we have a whole number
+               if (Math.floor(label) === label) {
+                   return label;
+               }
+
+           },
+        }
+      }
+    ]
+  }
+}
 var ctx = document.getElementById("myChart");
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: data,
   options: options
+});
+var ctx2 = document.getElementById("myChartPercent");
+var myBarChart = new Chart(ctx2, {
+  type: 'bar',
+  data: data2,
+  options: options2
 });
 
 
